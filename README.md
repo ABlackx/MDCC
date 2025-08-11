@@ -8,7 +8,7 @@ Official implementation of our paper:
 
 ## Framework
 
-![MDCC流程图](/figs/pipeline.png)
+![](/figs/pipeline.png)
 
 ## Installation
 
