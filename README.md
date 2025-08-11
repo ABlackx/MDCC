@@ -1,5 +1,15 @@
 # MDCC
 
+Official implementation of our paper:
+
+**"Feature mixing-driven dynamic contrastive consistency learning for robust source-free unsupervised domain adaptation"**
+
+*(Submitted to The Visual Computer)*
+
+## Framework
+
+![MDCC流程图](/figs/pipeline.png)
+
 ## Installation
 
  We use Python 3.10.14 environment with PyTorch 2.2.2+CUDA 11.8.
@@ -69,6 +79,12 @@ We have organized the files as follows:
 You can use the `generate_list.py` file to generate your own `.txt` files. Note that for `DomainNet-126`, the `.txt` files we use are from [AdaContrast](https://github.com/DianCh/AdaContrast/tree/master/datasets/domainnet-126). If no directory adjustment is needed, feel free to use our generated `.txt` files available at [[here](https://drive.google.com/drive/folders/1-RUqQqfLEcO8d8YaIJY0pL6A8QhMMGSQ?usp=drive_link)].
 
 ## Train source model
+
+You have two options:
+1. Use our pre-trained models, they are available at [[Google Drive](https://drive.google.com/drive/folders/1ahBN5-MKOihYa69Ae9OA-IeLJnUiUqVD?usp=drive_link)]
+2. Train your own models
+
+To train your own models, please run the following commands.
 
 ### Office31
 
@@ -142,13 +158,24 @@ python train_target.py --dset VISDA-C --net resnet101 --par_consistency 1.0 --lr
 ```python
 # We evaluate 7 tasks, so please set `--s` and `--t` manually
 python train_target.py --dset domainnet126 --net resnet50 --par_consistency 0.3 --lr 1e-2 --s 0 --t 3 --das
-                                                                                          --s 1 --t 0 --das
-                                                                                          --s 1 --t 2 --das
-                                                                                          --s 2 --t 0 --das
-                                                                                          --s 2 --t 1 --das
-                                                                                          --s 2 --t 3 --das
-                                                                                          --s 3 --t 1 --das
+python train_target.py --dset domainnet126 --net resnet50 --par_consistency 0.3 --lr 1e-2 --s 1 --t 0 --das
+python train_target.py --dset domainnet126 --net resnet50 --par_consistency 0.3 --lr 1e-2 --s 1 --t 2 --das
+python train_target.py --dset domainnet126 --net resnet50 --par_consistency 0.3 --lr 1e-2 --s 2 --t 0 --das
+python train_target.py --dset domainnet126 --net resnet50 --par_consistency 0.3 --lr 1e-2 --s 2 --t 1 --das
+python train_target.py --dset domainnet126 --net resnet50 --par_consistency 0.3 --lr 1e-2 --s 2 --t 3 --das
+python train_target.py --dset domainnet126 --net resnet50 --par_consistency 0.3 --lr 1e-2 --s 3 --t 1 --das
 ```
+
+## Citation
+
+If you find this code useful for your research, please cite our papers
+
+```
+# Todo
+......
+```
+
+
 
 ## Acknowledgement
 
