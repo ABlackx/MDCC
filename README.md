@@ -1,8 +1,6 @@
 # MDCC
 [![DOI](https://zenodo.org/badge/1033733239.svg)](https://doi.org/10.5281/zenodo.16795362)
 
-[![DOI](https://zenodo.org/badge/1033733239.svg)](https://doi.org/10.5281/zenodo.16795362)
-
 Official implementation of our paper:
 
 **"Feature mixing-driven dynamic contrastive consistency learning for robust source-free unsupervised domain adaptation"**
