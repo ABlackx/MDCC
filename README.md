@@ -3,7 +3,7 @@
 
 Official implementation of our paper:
 
-**"Feature mixing-driven dynamic contrastive consistency learning for robust source-free unsupervised domain adaptation"**
+**"Feature mixing-driven dynamic contrastive learning for robust source-free unsupervised domain adaptation"**
 
 *(Submitted to The Visual Computer)*
 
